@@ -84,7 +84,7 @@ src/main/java/com/example/concurrency/
 - **비관적 락**: 데이터베이스 레벨, 단일 DB 환경
 
 ### 2. 트랜잭션 범위의 중요성
-- **분산락**: `saveAndFlush()` 필수 (락 범위 안에서 DB 커밋 완료)
+- **분산락**: `saveAndFlush()` (락 범위 안에서 DB 커밋 완료)
 - **비관적 락**: `save()` 충분 (트랜잭션이 전체 보호)
 
 ### 3. Lost Update 패턴
