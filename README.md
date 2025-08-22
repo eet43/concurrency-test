@@ -20,25 +20,6 @@
 - **Container**: Docker, Docker Compose
 - **Build**: Maven
 
-## 🚀 빠른 시작
-
-### 1. 환경 구성
-```bash
-# 저장소 클론
-git clone [repository-url]
-cd concurrency-test
-
-# Redis + H2 컨테이너 실행
-docker-compose up -d
-```
-
-### 2. 애플리케이션 실행
-```bash
-# IDE에서 ConcurrencyTestApplication.main() 실행
-# 또는
-mvn spring-boot:run
-```
-
 ## 📊 동시성 테스트
 
 ### 분산락 테스트
