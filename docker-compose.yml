@@ -1,0 +1,26 @@
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: concurrency-redis
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+
+  h2:
+    image: oscarfonts/h2:2.1.214
+    container_name: concurrency-h2
+    ports:
+      - "1521:1521"
+      - "8082:8082"
+    environment:
+      - H2_OPTIONS=-ifNotExists -baseDir /opt/h2-data
+    volumes:
+      - h2_data:/opt/h2-data
+    restart: unless-stopped
+
+volumes:
+  redis_data:
+  h2_data:
